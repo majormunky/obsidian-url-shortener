@@ -33,3 +33,5 @@ url.wen: https://www.amazon.com/WEN-GN625i-Compliant-6250-Watt-Transfer-Switch-R
 ```
 
 This lets you define urls you want to use in your note, and then use a special tag to refer to that url.  When hitting preview, the URL will change to the real one, letting you click on it as normal
+
+Note: This plugin does not currently do this
