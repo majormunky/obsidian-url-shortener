@@ -11,6 +11,20 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 }
 
 export default class MyPlugin extends Plugin {
+function getFrontMatter() {
+	let result = {};
+
+	const file = app.workspace.getActiveFile();
+	let fmc = app.metadataCache.getFileCache(file)?.frontmatter;
+	
+	for (let key in fmc) {
+		if (key == "position") continue;
+
+		result[key] = fmc[key];
+	}
+
+	return result;
+}
 	settings: MyPluginSettings;
 
 	async onload() {
