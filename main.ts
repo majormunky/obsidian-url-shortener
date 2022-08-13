@@ -10,7 +10,6 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 	mySetting: 'default'
 }
 
-export default class MyPlugin extends Plugin {
 function getFrontMatter() {
 	let result = {};
 
@@ -25,6 +24,8 @@ function getFrontMatter() {
 
 	return result;
 }
+
+export default class UrlShortenerPlugin extends Plugin {
 	settings: MyPluginSettings;
 
 	async onload() {
@@ -32,8 +33,10 @@ function getFrontMatter() {
 
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
-			// Called when the user clicks the icon.
-			new Notice('This is a notice!');
+			new Notice("Happy Friday!");
+
+			let data = getFrontMatter();
+			console.log(data)
 		});
 		// Perform additional things with the ribbon
 		ribbonIconEl.addClass('my-plugin-ribbon-class');
