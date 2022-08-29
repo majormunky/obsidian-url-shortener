@@ -34,4 +34,5 @@ url.wen: https://www.amazon.com/WEN-GN625i-Compliant-6250-Watt-Transfer-Switch-R
 
 This lets you define urls you want to use in your note, and then use a special tag to refer to that url.  When hitting preview, the URL will change to the real one, letting you click on it as normal
 
-Note: This plugin does not currently do this
+Note:
+Currently, this happens when Obsidian needs to re-render the content that includes the tag.  If you change the url in the frontmatter area, but not the tag area, Obsidian doesn't know to re-render the table where the url should be updated at.  Looking into alternatives.
